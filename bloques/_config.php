@@ -5,18 +5,13 @@
 const DEBUG= true;
 
 //DATOS
-const SITENAME= "Opel";
+const SITENAME= "Entérate Gijón";
 const LANG= "es";
 const URL = "http://localhost:8080";
 
-const DATOS = [
-    'direccion' => 'Calle 123',
-    'ciudad'    => 'Ciudad 1',
-    'email'     => 'opel@opel.com',
-    'pais'      => 'Pais 1',
-    'tel'       => '123456789',
-    'gps'       => '123.456.789'
-];
+
+
+
 
 const MENU = [
     [
@@ -26,20 +21,26 @@ const MENU = [
         'target' => 0
     ],
     [
-        'texto' => 'Contacto',
-        'url'   => 'contacto.php',         
+        'texto' => 'Festivales',
+        'url'   => 'Festivales.php',         
         'clase' => '',
         'target' => 0
     ],
     [
-        'texto' => 'Log In',
-        'url'   => 'logIn.php', 
+        'texto' => 'Sobre Nosotros',
+        'url'   => 'nosotros.php', 
+        'clase' => '',
+        'target' => 0
+    ],
+    [
+        'texto' => 'Contacto',
+        'url'   => 'contacto.php', 
         'clase' => '',
         'target' => 0
     ]
 ];
-//Llamar a contruir menú. Ejemplo de llamada a la función: contruirMenu(MENU2, false)
-//Función que construirá nuestros menús, los valores por defecto son MENU y true
+
+//Función que construirá el menú del header, los valores por defecto son MENU y true
 function construirMenu($array=MENU, $nav=true)
 {
     
@@ -56,6 +57,10 @@ function construirMenu($array=MENU, $nav=true)
 
     return $miHTML;
 }
+
+
+
+
 
 //Función que se asegura de sanitizar el código
 function limpiar($aLimpiar){
@@ -101,7 +106,7 @@ function debug($texto)
 
 ?>
 
-<? const TITULO= "Descubre tu momento"; ?>
+<? const TITULO= "Entérate Gijón"; ?>
 
 <!--para la base de datos -->
 <?php
@@ -111,16 +116,14 @@ const USER = "root";
 const PASS = "root";
 const DBNA = "xperience";
 
-function consulta($sql);
 // Create connection
-$conn = mysqli_connect( HOST, USER, PASS, DBNA);
+$conn = mysqli_connect(HOST, USER, PASS, DBNA);
 
 // Check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
-?>
 
+?>
 
 

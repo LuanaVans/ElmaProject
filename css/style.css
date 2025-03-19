@@ -1,0 +1,79 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+header{
+    background: url(../img/logo.jpg) no-repeat center center;
+    padding:40px;
+    margin:top:10px;
+}
+.logo{
+    max-width: 60%;
+    height: auto;
+}
+/* Establece el diseño de las fichas en 3 columnas */
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las fichas */
+    list-style: none;
+    padding: 0;
+}
+
+/* Asegura que las imágenes tengan la misma dimensión */
+.container .contenedor img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 200px; /* Fija una altura común para las imágenes */
+    object-fit: cover; /* Mantiene la imagen proporcional y la ajusta sin distorsionarse */
+}
+
+/* Estilo para cada ficha */
+.container {
+    background-color: #f9f9f9; /* Fondo claro para cada ficha */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse sobre la ficha */
+.container:hover {
+    transform: translateY(-5px); /* Sube ligeramente la ficha al pasar el mouse */
+}
+
+/* Asegura que el contenido de la ficha se vea bien */
+.contenedor {
+    padding: 15px
+
+li {
+    list-style:none;
+    display: inline;
+    gap:15px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*
+ul {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+    */
+footer{
+    background:red;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: :bold;;
+}
+footer li a{
+    margin-left:40px;
+}
