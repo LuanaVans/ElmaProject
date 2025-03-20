@@ -74,7 +74,14 @@ if (mysqli_num_rows($resultado_array) > 0)
 
 <aside>
 <h4>calendario</h4>
-<h4>¿Tienes Tiempo?</h4>
+<ul> ¿Tienes Tiempo?
+    <li><a href="lugares.php">Lugares de Interés</a></li>
+    <li><a href="rutas.php">Rutas y Excursiones</a></li>
+    <li><a href="museos.php">Museos</a></li>
+    <li><a href="parques.php">Parques</a></li>
+    <li><a href="bibliotecas.php">Bibliotecas</a></li>
+    <li><a href="fiestas.php">Fiestas de Interés Cultural en Asturias</a></li>
+</ul>
 </aside>
 
 
