@@ -10,8 +10,8 @@
 <body>
   <header>
     
+    <div class="logo"><?=SITENAME?></div>
     <?php echo construirMenu(); ?>
-    <div class="logo"></div>
 </header>
 <main>
   

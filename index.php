@@ -1,6 +1,8 @@
 <? require_once 'bloques/_config.php'; ?>
 <? include 'bloques/_header.php'; ?>
 
+<section class="container">
+    
 
 <h1> Agenda Cultural de Gijón </h1>
 <?
@@ -40,7 +42,7 @@ $resultado_array = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($resultado_array) > 0) 
 {
-    echo "<ul>";
+    echo "<ul class='galeria'>";
     while ($row = mysqli_fetch_assoc($resultado_array)) 
     {
         echo "<li class='container'>
@@ -68,9 +70,13 @@ if (mysqli_num_rows($resultado_array) > 0)
 }
 
 ?>
-</main>
-<footer>
+</section>
+
+<aside>
+<h4>calendario</h4>
+<h4>¿Tienes Tiempo?</h4>
+</aside>
+
+
+
 <? include 'bloques/_footer.php'; ?>
-</footer
-</body> 
-</html> 

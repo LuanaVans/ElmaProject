@@ -16,7 +16,7 @@ const URL = "http://localhost:8080";
 const MENU = [
     [
         'texto' => 'Inicio',
-        'url'   => '/', 
+        'url'   => 'index.php', 
         'clase' => '',
         'target' => 0
     ],

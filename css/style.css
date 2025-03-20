@@ -1,59 +1,95 @@
-*{
-	outline: solid 1px red;
+:root{
+    --c1:#f8332f;
+    --c2:#000000;
+
+    --ff:system-ui, aria, sans-serif;
+    --mxw:1040px;    
+
+        --debug:1px;
 }
+
+
+*{
+	outline: var(--debug) solid red;
+        box-sizing: border-box;
+
+}
+
 body {
     padding: 20px;
-    font-family: sans-serif;
+    font-family: var(--ff);
     
-    width: 100%; 
-    max-width: 1040px; 
+    max-width: var(--mxw); 
+    min-width:320px;
     margin: 0 auto; 
     
-    box-sizing: border-box;
 }
 a{
     text-decoration: none;
-    color:black;
+    color:var(--c2);
     font-weight: bold;
 }
-/* Estilo  para el menú de navegación del Header */
-nav.menu {
-    display: flex; 
-    justify-content: flex-end; 
-    padding: 10px 20px; 
+
+
+
+
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav ul{
+    display: flex;
+    justify-content:flex-end;
+    gap:10px;
+    list-style: none;
+    padding-left: 0;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 
-ul.headermenu {
-    display: flex; 
-    margin: 0;
-    padding: 0;
-    list-style: none; 
+header nav ul a:hover{
+    color: var(--c1);
 }
 
 
-ul.headermenu li {
-    margin-left: 20px; 
-}
 
-
-ul.headermenu li a {
-    text-decoration: none; 
- 
-    font-size: 18px; 
-    padding: 5px 10px; 
+@media (max-width:680px){
+    header{
+            justify-content: center;
+            flex-direction:column;
     }
-
-
-ul.headermenu li a:hover {
-   
-    color: red; 
 }
 
- 
-ul {
+
+
+.logo {
+    text-indent: -9999px;
+    display: inline-block;
+    width: 200px;
+    height: 120px;
+    background: url(../img/logo.jpg)
+      center center no-repeat;
+    background-size: 130%;
+  }
+
+
+
+
+
+/* MAIN*/
+
+ /* estilo para las fichas de eventos */
+ul.galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px; 
     padding: 0;
     list-style: none;
@@ -94,6 +130,49 @@ ul li .contenedor p {
     margin-bottom: 8px;
     text-align: center;
 }
+footer {
+    background: red;
+    font-weight: bold;
+    padding:20px;
+    
+    }
+
+    /* Estilo para el formulario de contacto */
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    button {
+        background-color: red;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: red;
+    }   
+    
 
 /* Responsividad (para pantallas más pequeñas) */
 @media (max-width: 768px) {
@@ -108,14 +187,3 @@ ul li .contenedor p {
     }
 }
    
-
-
-
-
-
-footer {
-    background: red;
-    font-weight: bold;
-    padding:30px;
-
-}
