@@ -50,15 +50,12 @@ if (mysqli_num_rows($resultado_array) > 0)
         {
             echo "<img src='{$row['evento_img']}' alt='Imagen del evento'class='evento'>";
         }
-        else
-        {
-            echo "<img src='img/evento_default.avif' alt='Imagen del evento'class='evento'>";
-        }
+       // else
+        //{
+            //echo "<img src='img/evento_default.avif' alt='Imagen del evento'class='evento'>";
+        //}
         
-        
-        echo "</div>
-        <div class='contenedor'>
-        <h2>{$row['evento_nombre']}</h2>
+        echo "<h2>{$row['evento_nombre']}</h2>
             <p>Fecha: ".date("d M Y", strtotime($row['evento_horario']))."</p>
             <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
             <p>Lugar: {$row['direccion_nombre']}</p>
@@ -71,5 +68,9 @@ if (mysqli_num_rows($resultado_array) > 0)
 }
 
 ?>
-
+</main>
+<footer>
 <? include 'bloques/_footer.php'; ?>
+</footer
+</body> 
+</html> 

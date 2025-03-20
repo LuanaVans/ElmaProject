@@ -44,7 +44,7 @@ const MENU = [
 function construirMenu($array=MENU, $nav=true)
 {
     
-    $miHTML = '<ul>';
+    $miHTML = '<ul class="headermenu">';
     foreach($array as $item)
     {
         $miHTML .= "<li><a href='{$item['url']}' target='{$item['target']}' class='{$item['clase']}'>{$item['texto']}</a></li>";
@@ -52,7 +52,7 @@ function construirMenu($array=MENU, $nav=true)
     $miHTML .= '</ul>';
 
     if($nav){
-        $miHTML = "<nav>$miHTML</nav>";
+        $miHTML = "<nav class='menu'>$miHTML</nav>";
     }
 
     return $miHTML;
