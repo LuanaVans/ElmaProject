@@ -21,7 +21,7 @@
 </form>
 <br>
 
-<p>Correo electrónico: entérate@entérate.com</p>
+<p>Correo electrónico: enterate@enterate.com</p>
 <p>Teléfono de contacto: 600-00-00-00</p>
 <ul class="social">
     <li><a href=""></a>Facebook</li>

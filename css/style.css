@@ -130,12 +130,14 @@ ul li .contenedor p {
     margin-bottom: 8px;
     text-align: center;
 }
+/* Estilo del footer */
 footer {
     background: red;
     font-weight: bold;
     padding:20px;
     
     }
+    ul{list-style:none;}
 
     /* Estilo para el formulario de contacto */
     form {
