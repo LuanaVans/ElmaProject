@@ -4,7 +4,7 @@
 <h1>¿Quieres contactar con nosotros?</h1>
 <p>Si tienes alguna duda o consulta sobre alguno de los eventos publicados u otra consulta, ponte en contacto con nosotros</p>
 
-<form action="/submit_form" method="POST">
+<form action="form.php" method="POST">
     <label for="name">Nombre:</label>
     <input type="text" id="name" name="name" required>
 

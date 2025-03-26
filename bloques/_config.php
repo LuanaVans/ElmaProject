@@ -125,5 +125,20 @@ if (!$conn) {
 }
 
 ?>
+<?
+function cargarJSON($ruta){
+        // cargar el JSON
+    if (file_exists($ruta))
+    {
+        $miJSON=file_get_contents($ruta);
+        $miArray=json_decode($miJSON,'true');
+        return $miArray;
+    }
+    else{
+        echo "No hemos guardado nada";
+    }
+        
+}
+
 
 

@@ -1,10 +1,11 @@
 <? require_once 'bloques/_config.php'; ?>
 <? include 'bloques/_header.php'; ?>
 
-<section class="container">
+
     
 
 <h1> Agenda Cultural de Gijón </h1>
+<section class="container">
 <?
 // desplegams los datos de la base de datos
 
@@ -72,7 +73,7 @@ if (mysqli_num_rows($resultado_array) > 0)
 ?>
 </section>
 
-<aside>
+<aside class="aside">
 <h4>calendario</h4>
 <ul> ¿Tienes Tiempo?
     <li><a href="lugares.php">Lugares de Interés</a></li>

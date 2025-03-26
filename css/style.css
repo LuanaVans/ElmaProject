@@ -130,6 +130,57 @@ ul li .contenedor p {
     margin-bottom: 8px;
     text-align: center;
 }
+/* Estilo Festivales */
+
+.festilista {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+
+.item {
+    display: flex; 
+    margin-bottom: 20px; 
+    border: 1px solid #9e9d9d; 
+    padding: 10px;
+    
+    border-radius: 8px; 
+    align-items: center; 
+
+
+.imagen {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin-right: 20px; 
+    border-radius: 8px; 
+}
+
+
+.info {
+    flex: 1; /* Hace que el texto ocupe todo el espacio restante */
+}
+
+
+.info h2 {
+    font-size: 20px; 
+    margin: 0 0 10px; 
+    color:black; 
+}
+
+
+.info p {
+    margin: 5px 0; 
+    color:black; 
+
+
+.item:hover {
+    
+    cursor: pointer; /* Cambiar el cursor a puntero */
+}
+
+    
 /* Estilo del footer */
 footer {
     background: red;
@@ -188,4 +239,6 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
     }
 }
+
+
    

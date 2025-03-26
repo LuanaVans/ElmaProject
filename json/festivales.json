@@ -1,0 +1,49 @@
+ { "festivales":[
+    {
+        "imagen": "https://i0.wp.com/metalcry.com/wp-content/uploads/2025/03/Vidiago-Rock-XXI-scaled.jpg",
+        "nombre": "Vidiago Rock",
+        "fecha": "2 de Mayo de 2025 al 4 de Mayo de 2025",
+        "lugar": "Vidiago"
+      },
+    {
+      "imagen": "https://nuebo.es/wp-content/uploads/2024/11/CARTEL-BOOM-2025-e1731491746771.png",
+      "nombre": "BomBastic Festival",
+      "fecha": "17 de Julio de 2025 al 19 de Julio de 2025",
+      "lugar": "Llanera"
+    },
+    {
+      "imagen": "https://i0.wp.com/metalcry.com/wp-content/uploads/2025/01/LuarcaPosterA3-scaled.jpg",
+      "nombre": "Luarca Metal Fest",
+      "fecha": "11 de Julio al 12 de Julio de 2025",
+      "lugar": "Luarca"
+      
+    },
+    {
+      "imagen": "https://www.dodmagazine.es/wp-content/uploads/2023/11/tsunami-xixon-2025-1200x1200.jpg",
+      "nombre": "Tsunami Xixón",
+      "fecha": "18 de Julio de 2025 al 19 de Julio de 2025",
+      "lugar": "Gijón"
+    },
+    {
+      "imagen": "https://i0.wp.com/allmusicspain.com/wp-content/uploads/2024/09/Aquasella-2025-1.png",
+      "nombre": "Aquasella Fest",
+      "fecha": "14 de Agosto de 2025 al 17 de agosto de 2025",
+      "lugar": "Arriondas"
+      
+    },
+    {
+      "imagen": "https://pbs.twimg.com/media/GmQv7sFWIAAGVcE.jpg",
+      "nombre": "Unirock",
+      "fecha": "23 de Agosto de 2025",
+      "lugar": "Puerto de Vega"
+    },
+    {
+      "imagen": "https://heavymetalbrigade.wordpress.com/wp-content/uploads/2025/03/rockvera1.jpg",
+      "nombre": "Rockvera",
+      "fecha": "30 de  Agosto de 2025",
+      "lugar": "Avilés"
+    }
+    
+  ]
+}
+  
