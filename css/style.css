@@ -360,5 +360,46 @@ footer {
     }
 }
 
+/* Estilo del Calendario */
+.calendar { 
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px; 
+    text-align: center; 
+  }
+  .calendar div { 
+    padding: 10px; 
+    cursor: pointer; 
+    border: 1px solid #ccc; 
+  }
+  .selected { 
+    background-color: #4CAF50; 
+    color: white; 
+  }
+  .disabled { 
+    background-color: #ddd; 
+    cursor: not-allowed; 
+  }
+  /* Estilos del encabezado */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .month-year {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: red;
+  }
+
 
    

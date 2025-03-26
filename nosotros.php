@@ -41,49 +41,18 @@
   <span class="dot" onclick="currentSlide(4)"></span> 
 </div>
 
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
+<script src="js/nosotros.js"></script>
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h1>¿Quienes Somos?</h1>
+<br>
+<h2>Comprometidos con la Cultura </h2>
+<p>Entérate Gijón nace con el afán de poder dar voz y hacer llegar a todo el público los diversos contenidos culturales que ofrece nuestra comunidad. Nuestra misión es hacer de Gijón un referente cultural a nivel nacional, facilitando el acceso a eventos de calidad que fomenten la creatividad, la participación y el disfrute de todos. Trabajamos al lado de instituciones, espacios culturales y empresas locales para poder ofrecer una programación única, accesible y variada para todos los gustos y edades.</p>
+<br>
+<h2>Un Enfoque Innovador y Cercano</h2>
+<p>Creemos que la cultura debe ser accesible para todos. Por eso, no solo informamos de  eventos de pago, sino que también fomentamos la creación de  talleres, charlas, encuentros con artistas, conciertos,exposiciones etc. Además, utilizamos plataformas digitales y redes sociales para mantenerte informado sobre cada evento y asegurarnos de que vivas la experiencia cultural de Gijón al máximo.</p>
+<br>
+<h2>Colabora con nosotros</h2>
+<p>Si eres un artista, un espacio cultural, una empresa o una institución y quieres colaborar con nosotros, no dudes en ponerte en contacto. Estamos abiertos a nuevas propuestas y a trabajar juntos para hacer de Gijón un lugar más cultural y creativo.</p>
 
 
 
