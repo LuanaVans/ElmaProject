@@ -62,8 +62,7 @@ if (mysqli_num_rows($resultado_array) > 0)
             <p>Fecha: ".date("d M Y", strtotime($row['evento_horario']))."</p>
             <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
             <p>Lugar: {$row['direccion_nombre']}</p>
-            <p>Dirección: {$row['direccion_direccion']}</p>
-            <p>Tipo: {$row['evento_tipo']}</p>
+            
         </div>
         </li>";
     }
