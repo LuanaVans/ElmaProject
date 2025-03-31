@@ -153,61 +153,7 @@ ul li .contenedor p {
     text-align: center;
     font-family: var(--ff);
 }
-/* Estilo Festivales */
 
-.festilista {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-}
-
-
-.item {
-    display: flex; 
-    margin-bottom: 20px; 
-    border: 1px solid #9e9d9d; 
-    padding: 10px;
-    
-    border-radius: 8px; 
-    align-items: center; 
-}
-
-
-.imagen {
-    width: 150px; 
-    
-    object-fit: cover; 
-    margin-right: 20px; 
-    border-radius: 8px; 
-}
-
-
-.info {
-    flex: 1; 
-}
-
-
-.info h2 {
-    font-size: 20px; 
-    margin: 0 0 10px; 
-    color:black; 
-    font-family: var(--ff);
-}
-
-
-.info p {
-    margin: 5px 0; 
-    color:black; 
-    font-family: var(--ff);
-    font-size:18px;
-}
-
-.item:hover {
-    
-    cursor: pointer; /* Cambiar el cursor a puntero */
-}
-
-    
 /* Estilo del footer */
 footer {
     background: red;
@@ -216,7 +162,13 @@ footer {
     font-family: var(--ff);
     
     }
-    ul{list-style:none;}
+    .pie{text-align:center;
+    font-size: 18px;}
+    
+    ul{list-style:none;
+    padding-left:0;
+  display:flex;
+  justify-content:space-between;}
 
     /* Estilo para el formulario de contacto */
     form {
@@ -255,22 +207,146 @@ footer {
         background-color: white;
         color: red;
     }   
+/* Estilos generales del calendario */
+.calendario {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
+.calendario th, .calendario td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.calendario th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.calendario td {
+    vertical-align: top;
+    height: 100px;
+}
+
+.dia {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.evento {
+    background-color: #e1f5fe;
+    border: 1px solid #81d4fa;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.evento strong {
+    font-size: 14px;
+}
+
+.evento em {
+    font-size: 12px;
+    color: #888;
+}
+
+.evento p {
+    font-size: 12px;
+    color: #333;
+}
+
+.evento img {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+
+/* Estilo de navegación */
+.navegacion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    .calendario th, .calendario td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .evento {
+        font-size: 12px;
+    }
+
+    .evento img {
+        max-width: 100px;
+    }
+}
+/* Estilo Política de Seguridad*/
+
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: black;
+    font-size: 24px;
+    margin-top: 20px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+.section {
+    margin-bottom: 30px;
+}
+.section ul {
+    padding-left: 20px;
+}
+.section li {
+    margin-bottom: 10px;
+}
+.section h3 {
+    font-size: 20px;
+    color: black;
+}
+
+    
+    
     /*Estilo del carrusel de fotos del apartado Sobre Nosotros*/
 
-    /* Slideshow container */
+    
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
   }
   
-  /* Hide the images by default */
+  
   .mySlides {
     display: none;
   }
   
-  /* Next & previous buttons */
+  
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -286,18 +362,18 @@ footer {
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
+  
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
+  
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption text */
+  
   .text {
     color: #f2f2f2;
     font-size: 25px;
@@ -310,7 +386,7 @@ footer {
     font-weight: bold;
   }
   
-  /* Number text (1/4 etc) */
+  
   .numbertext {
     color: #f2f2f2;
     font-size: 15px;
@@ -319,7 +395,7 @@ footer {
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
+  
   .dot {
     cursor: pointer;
     height: 15px;
@@ -335,7 +411,7 @@ footer {
     background-color: #000000;
   }
   
-  /* Fading animation */
+  
   .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -360,46 +436,80 @@ footer {
     }
 }
 
-/* Estilo del Calendario */
-.calendar { 
-    display: grid; 
-    grid-template-columns: repeat(7, 1fr); 
-    gap: 5px; 
-    text-align: center; 
-  }
-  .calendar div { 
-    padding: 10px; 
-    cursor: pointer; 
-    border: 1px solid #ccc; 
-  }
-  .selected { 
-    background-color: #4CAF50; 
-    color: white; 
-  }
-  .disabled { 
-    background-color: #ddd; 
-    cursor: not-allowed; 
-  }
-  /* Estilos del encabezado */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .month-year {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  .button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  .button:hover {
-    background-color: red;
-  }
+/* Estilos generales para la lista de festivales */
+.festilista {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  justify-content: space-between; 
+}
+
+/* Estilo para cada ítem de la lista (ficha de festival) */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; 
+  max-width: 100%; 
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen */
+.imagen {
+  width: 100%; 
+  height: auto; 
+  max-width: 190px; 
+  object-fit: cover; 
+  margin-right: 20px;
+  border-radius: 8px;
+}
 
 
-   
+.info {
+  flex: 1; 
+}
+
+/* Títulos de los festivales */
+.info h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+
+.festi {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+
+
+.item {
+  width: 100%; 
+  box-sizing: border-box; 
+}
+.festiv {
+  font-size:20px;
+  color:black;
+  padding:5px;
+  margin: 5px 0;
+  font-family: serif;
+
+}
+
+
+
+/* Flexbox se encarga de hacer que todo sea responsivo sin media queries */

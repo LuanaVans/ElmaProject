@@ -5,6 +5,15 @@
     
 
 <h1> Agenda Cultural de Gijón </h1>
+<p class="festiv">Descubre la agenda cultural de Gijón, donde cada día ofrece nuevas oportunidades para disfrutar de arte, música, teatro y eventos únicos. Mantente al tanto de las actividades más destacadas y no te pierdas lo mejor de nuestra ciudad</p>
+
+
+
+  
+
+
+
+
 <section class="container">
 <?
 // desplegams los datos de la base de datos
@@ -73,72 +82,9 @@ if (mysqli_num_rows($resultado_array) > 0)
 </section>
 
 <aside class="aside">
-<h4>Calendario</h4>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario de Eventos Culturales</title>
-  <style>
-    /* Estilos básicos para el calendario */
-    .calendar { 
-      display: grid; 
-      grid-template-columns: repeat(7, 1fr); 
-      gap: 5px; 
-      text-align: center; 
-    }
-    .calendar div { 
-      padding: 10px; 
-      cursor: pointer; 
-      border: 1px solid #ccc; 
-    }
-    .selected { 
-      background-color: #4CAF50; 
-      color: white; 
-    }
-    .disabled { 
-      background-color: #ddd; 
-      cursor: not-allowed; 
-    }
-    /* Estilos del encabezado */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .month-year {
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-    .button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    .button:hover {
-      background-color: #45a049;
-    }
-  </style>
-</head>
-<body>
-  <h1>Calendario de Eventos Culturales</h1>
+<h1>Calendario de Eventos Culturales</h1>
 
-  <!-- Contenedor de navegación del mes -->
-  <div class="header">
-    <button class="button" onclick="changeMonth(-1)">&#60; Anterior</button>
-    <div class="month-year" id="monthYear"></div>
-    <button class="button" onclick="changeMonth(1)">Siguiente &#62;</button>
-  </div>
-
-  <div id="calendar" class="calendar"></div>
-
-  <h2>Eventos para el <span id="selectedDate">Seleccione una fecha</span></h2>
-  <div id="events"></div>
-  
-  <script src="js/calendario.js"></script>
+ 
 
 
 
