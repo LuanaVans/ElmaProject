@@ -10,7 +10,7 @@
 
 
   
-
+<div class="secciones">
 
 
 
@@ -66,11 +66,18 @@ if (mysqli_num_rows($resultado_array) > 0)
         //{
             //echo "<img src='img/evento_default.avif' alt='Imagen del evento'class='evento'>";
         //}
+
+
+       
+
+$fecha= convertirFechaES($row['evento_fecha']);
+
         
         echo "<h2>{$row['evento_nombre']}</h2>
-            <p>Fecha: ".date("d M Y", strtotime($row['evento_horario']))."</p>
-            <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
-            <p>Lugar: {$row['direccion_nombre']}</p>
+      <p> $fecha</p> <!-- Aquí se usa directamente la fecha del evento -->
+      <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
+      <p>Lugar: {$row['direccion_nombre']}</p>;
+
             
         </div>
         </li>";
@@ -82,11 +89,6 @@ if (mysqli_num_rows($resultado_array) > 0)
 </section>
 
 <aside class="aside">
-<h1>Calendario de Eventos Culturales</h1>
-
- 
-
-
 
 <ul> ¿Tienes Tiempo?
     <li><a href="lugares.php">Lugares de Interés</a></li>
@@ -98,6 +100,7 @@ if (mysqli_num_rows($resultado_array) > 0)
 </ul>
 </aside>
 
+</div>
 
 
 <? include 'bloques/_footer.php'; ?>

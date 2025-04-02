@@ -140,7 +140,21 @@ function cargarJSON($ruta){
         
 }
 
+// Función para convertir una fecha en formato "YYYY-MM-DD" a "lunes 25 de abril de 2025"
+function convertirFechaES($fecha) {
+    // Definir los días de la semana y los meses en español
+    $dias = array("domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado");
+    $meses = array("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre");
 
+    // Convertir la fecha de string a timestamp
+    $timestamp = strtotime($fecha);
 
+    // Obtener el día de la semana (0-6), el día del mes, el mes (1-12) y el año
+    $diaSemana = $dias[date("w", $timestamp)];  // Día de la semana
+    $dia = date("d", $timestamp);  // Día del mes
+    $mes = $meses[date("n", $timestamp) - 1];  // Mes (restamos 1 porque date("n") devuelve 1-12)
+    $anio = date("Y", $timestamp);  // Año
 
-
+    // Devolver la fecha en formato "lunes 25 de abril de 2025"
+    return "{$diaSemana} {$dia} de {$mes} de {$anio}";
+}
