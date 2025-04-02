@@ -25,8 +25,7 @@ $sql="SELECT
     e.descripcion AS evento_descripcion,
     e.fecha AS evento_fecha,
     e.horario AS evento_horario,
-    e.precio_min AS evento_precio_min,
-    e.precio_max AS evento_precio_max,
+    
     d.nombre AS direccion_nombre,
     d.direccion AS direccion_direccion,
     d.cp AS direccion_cp,
@@ -52,7 +51,7 @@ $resultado_array = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($resultado_array) > 0) 
 {
-    echo "<ul class='galeria'>";
+    echo "<a href='ficha.php'><ul class='galeria'>";
     while ($row = mysqli_fetch_assoc($resultado_array)) 
     {
         echo "<li class='container'>
@@ -83,6 +82,7 @@ $fecha= convertirFechaES($row['evento_fecha']);
         </li>";
     }
     echo "</ul>";
+    echo "</a>";
 }
 
 ?>
