@@ -40,11 +40,11 @@ if ($result->num_rows > 0) {
     <!-- Descripción del evento -->
     <div class="ficha-descripcion">
         <h1><?= $evento['nombre'] ?></h1>
-        <p><?= $evento['descripcion'] ?></p>
         <p><?= $evento['fecha'] ?></p>
         <p><?= $evento['horario'] ?></p>
         <p><?= $evento['id_direccion'] ?></p>
         <p><?= $evento['precio'] ?></p>
+        <p><?= $evento['descripcion'] ?></p>
     </div>
 </section>
 

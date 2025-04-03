@@ -552,3 +552,41 @@ span.contenido {
   display: block;
   margin-top: 5px;
 }
+
+/*Estilo de la página ficha*/
+.ficha img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 30px auto 10px auto; /* Esto centra la imagen horizontalmente */
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.ficha p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-family: var(--ff);
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+.ficha h1 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: var(--ff);
+    font-weight: bold;
+    margin-top: 20px;
+}
+.ficha h2{
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: var(--ff);
+    font-weight: bold;
+    margin-top: 20px;
+}

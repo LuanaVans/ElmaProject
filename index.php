@@ -51,11 +51,12 @@ $resultado_array = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($resultado_array) > 0) 
 {
-    echo "<a href='ficha.php?id=?'><ul class='galeria'>";
+    echo "<ul class='galeria'>";
     while ($row = mysqli_fetch_assoc($resultado_array)) 
     {
         echo "<li class='container'>
-        <div class='contenedor'>";
+        <div class='contenedor'>
+        <a href='ficha.php?id={$row['evento_id']}'>";
         
         if($row['evento_img'] != null)
         {
@@ -76,13 +77,11 @@ $fecha= convertirFechaES($row['evento_fecha']);
       <p> $fecha</p> <!-- Aquí se usa directamente la fecha del evento -->
       <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
       <p>Lugar: {$row['direccion_nombre']}</p>
-
-            
+        </a>
         </div>
         </li>";
     }
     echo "</ul>";
-    echo "</a>";
 }
 
 ?>
