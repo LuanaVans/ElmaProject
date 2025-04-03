@@ -7,8 +7,6 @@ SELECT
     e.descripcion AS evento_descripcion,
     e.fecha AS evento_fecha,
     e.horario AS evento_horario,
-    e.precio_min AS evento_precio_min,
-    e.precio_max AS evento_precio_max,
     d.nombre AS direccion_nombre,
     d.direccion AS direccion_direccion,
     d.cp AS direccion_cp,

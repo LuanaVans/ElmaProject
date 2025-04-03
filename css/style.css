@@ -268,7 +268,7 @@ p {
     color: black;
 }
 
-}
+
 
      
     /*Estilo del carrusel de fotos del apartado Sobre Nosotros*/
@@ -455,7 +455,7 @@ p {
 
 }
 
-/* Flexbox se encarga de hacer que todo sea responsivo sin media queries */
+/* Estilo para el Aside */
 
 
 .secciones{
@@ -470,5 +470,85 @@ p {
 
 .secciones aside ul{
     flex-direction:column;
+    padding: 30px;
+}
+.aside{
+  margin-top: 30px;
+  padding: 10px;
+}
+.aside ul li{
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: black;
+    font-family: var(--ff);
+}
+.aside ul li a{
+    color: black;
+    font-family: var(--ff);
+}
+.aside ul li a:hover{
+    color: var(--c1);
+    font-family: var(--ff);
 }
 
+
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Gris claro */
+  color: #333; /* Gris oscuro */
+  
+}
+
+/* Estilo del contenedor principal del mensaje enviado */
+.mensaje-enviado {
+  background-color: #ffffff; /* Blanco */
+  border: 1px solid #ccc; /* Gris claro para el borde */
+  padding: 20px;
+  border-radius: 8px;
+  width: 50%;
+  margin: 30px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título principal */
+.titulo {
+  font-size: 24px;
+  color: #D32F2F; /* Rojo oscuro */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos (Nombre, Correo, Asunto, etc.) */
+.label {
+  font-weight: bold;
+  color: #555; /* Gris medio */
+  display: inline-block;
+  width: 120px;
+}
+
+/* Contenido de los campos (nombre, email, etc.) */
+.contenido {
+  color: #333; /* Gris oscuro */
+  font-size: 16px;
+}
+
+/* Mensaje de error */
+.error {
+  color: #D32F2F; /* Rojo oscuro */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Separación entre párrafos */
+p {
+  margin-bottom: 15px;
+}
+
+/* Estilo adicional para asegurar que las líneas de texto no se vean apelmazadas */
+span.contenido {
+  display: block;
+  margin-top: 5px;
+}

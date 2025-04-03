@@ -1,4 +1,3 @@
-
 <!--_config.php-->
 <?
 //Modo desarrollo 
@@ -158,4 +157,12 @@ function convertirFechaES($fecha) {
     // Devolver la fecha en formato "lunes 25 de abril de 2025"
     return "{$diaSemana} {$dia} de {$mes} de {$anio}";
 }
+
+
+?>
+
+
+
+
+
 

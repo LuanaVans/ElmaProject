@@ -1,3 +1,6 @@
+<? require_once 'bloques/_config.php'; ?>
+<? include 'bloques/_header.php'; ?>
+
 <?php
 // Comprobar si el formulario ha sido enviado mediante el método POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -10,17 +13,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Validar los datos (por ejemplo, validar el correo electrónico)
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Si los datos son válidos, mostrar los datos recibidos
-        echo "<h2>Datos recibidos:</h2>";
-        echo "<strong>Nombre:</strong> " . $name . "<br>";
-        echo "<strong>Correo Electrónico:</strong> " . $email . "<br>";
-        echo "<strong>Asunto:</strong> " . $subject . "<br>";
-        echo "<strong>Mensaje:</strong><br>" . nl2br($message) . "<br>";
+        echo "<div class='mensaje-enviado'>";
+        echo "<h2 class='titulo'>Mensaje Enviado:</h2>";
+        echo "<p><strong class='label'>Nombre:</strong> <span class='contenido'>" . $name . "</span></p>";
+        echo "<p><strong class='label'>Correo Electrónico:</strong> <span class='contenido'>" . $email . "</span></p>";
+        echo "<p><strong class='label'>Asunto:</strong> <span class='contenido'>" . $subject . "</span></p>";
+        echo "<p><strong class='label'>Mensaje:</strong><br><span class='contenido'>" . nl2br($message) . "</span></p>";
+        echo "</div>";
     } else {
         // Si el correo no es válido
-        echo "<p style='color:red;'>Por favor, ingresa un correo electrónico válido.</p>";
+        echo "<p class='error'>Por favor, ingresa un correo electrónico válido.</p>";
     }
 } else {
     // Si el formulario no se ha enviado correctamente
-    echo "<p>No se han enviado datos.</p>";
+    echo "<p class='error'>No se han enviado datos.</p>";
 }
 ?>
+<? include 'bloques/_footer.php'; ?>

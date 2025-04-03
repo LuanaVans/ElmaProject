@@ -24,10 +24,12 @@
 <p>Correo electrónico: enterate@enterate.com</p>
 <p>Teléfono de contacto: 600-00-00-00</p>
 <ul class="social">
-    <li><a href=""></a>Facebook</li>
-    <li><a href=""></a>Twitter</li>
-    <li><a href=""></a>Instagram</li>
-    </ul>
+    <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+    <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+</ul>
+<br>
+
     <br>
 <p>Dirección: Avenida de la Costa Nº55, 33205 Gijón</p>
 <div class="map-container">
