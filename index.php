@@ -6,7 +6,90 @@
 
 <h1> Agenda Cultural de Gijón </h1>
 <p class="festiv">Descubre la agenda cultural de Gijón, donde cada día ofrece nuevas oportunidades para disfrutar de arte, música, teatro y eventos únicos. Mantente al tanto de las actividades más destacadas y no te pierdas lo mejor de nuestra ciudad</p>
+<section class="newsletter">
+    <h2>Suscríbete a nuestra Newsletter</h2>
+    <form action="index_copy.php" method="POST">
+        <input type="email" name="email" placeholder="Introduce tu email" required>
+        <button type="submit">Suscribirse</button>
+    </form>
+</section>
 
+<section class="modal" id="newsletterModal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¡Gracias por suscribirte!</h2>
+        <p>Te mantendremos informado sobre los eventos culturales en Gijón.</p>
+    </div>
+</section>
+
+<script>
+    const modal = document.getElementById("newsletterModal");
+    const closeBtn = document.querySelector(".close");
+
+    // Mostrar el modal cuando el formulario sea exitoso
+    function showModal() {
+        modal.style.display = "block";
+    }
+
+    // Cerrar el modal cuando el usuario haga clic en el 'x'
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Cerrar el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("success")) {
+            modal.style.display = "block";
+        }
+    });
+</script>
+
+<?php
+// Verificamos si se envió el formulario
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['email'])) {
+    // Conexión a la base de datos
+    if (!$conn) {
+        die("Error de conexión a la base de datos: " . mysqli_connect_error());
+    }
+
+    // Sanear el email recibido
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+    // Preparamos la consulta SQL para insertar el email
+    $stmt = $conn->prepare("INSERT INTO newsletter (email) VALUES (?)");
+
+    if ($stmt === false) {
+        die("Error al preparar la consulta: " . $conn->error);
+    }
+
+    // Vinculamos el parámetro
+    $stmt->bind_param("s", $email); // "s" significa que el parámetro es una cadena (string)
+
+    // Intentamos ejecutar la consulta
+    if ($stmt->execute()) {
+        header('Location: index_copy.php?success=1');
+        exit();
+    } else {
+        if ($stmt->errno === 1062) {
+            header('Location: index_copy.php?error=email_exists');
+        } else {
+            header('Location: index_copy.php?error=database_error');
+        }
+        exit();
+    }
+
+    // Cerramos la sentencia preparada
+    $stmt->close();
+}
+
+?>
 
 
   
@@ -101,5 +184,6 @@ $fecha= convertirFechaES($row['evento_fecha']);
 
 </div>
 
+<? include 'c_filtro.php'; ?>
 
 <? include 'bloques/_footer.php'; ?>
