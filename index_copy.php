@@ -9,49 +9,71 @@
 
 <section class="newsletter">
     <h2>Suscríbete a nuestra Newsletter</h2>
-    <form action="procesar_newsletter.php" method="POST">
+    <form action="newsletter.php" method="POST">
         <input type="email" name="email" placeholder="Introduce tu email" required>
         <button type="submit">Suscribirse</button>
     </form>
-    <div id="newsletterModal" class="modal">
+</section>
+<section class="modal" id="newsletterModal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Suscríbete a nuestra Newsletter</h2>
-        <form action="procesar_newsletter.php" method="POST">
-            <input type="email" name="email" placeholder="Introduce tu email" required>
-            <button type="submit">Suscribirse</button>
-        </form>
+        <h2>¡Gracias por suscribirte!</h2>
+        <p>Te mantendremos informado sobre los eventos culturales en Gijón.</p>
     </div>
-</div>
-<button id="openModal">Suscribirse</button>
+</section>
+<script>
+    const modal = document.getElementById("newsletterModal");
+    const closeBtn = document.querySelector(".close");
 
-    <script>
-        // Obtener el modal
-        var modal = document.getElementById("newsletterModal");
+    // Mostrar el modal cuando el formulario sea exitoso
+    function showModal() {
+        modal.style.display = "block";
+    }
 
-        // Obtener el botón que abre el modal
-        var btn = document.getElementById("openModal");
+    // Cerrar el modal cuando el usuario haga clic en el 'x'
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
 
-        // Obtener el elemento <span> que cierra el modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // Cuando el usuario hace clic en el botón, abrir el modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // Cuando el usuario hace clic en <span> (x), cerrar el modal
-        span.onclick = function() {
+    // Cerrar el modal si el usuario hace clic fuera de él
+    window.onclick = function(event) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
+    }
 
-        // Cuando el usuario hace clic en cualquier parte fuera del modal, cerrarlo
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("success")) {
+            modal.style.display = "block";
         }
-    </script>
+    });
+</script>
+
+<?php
+if (isset($_GET['success'])) {
+    echo "<p>¡Gracias por suscribirte a nuestra newsletter!</p>";
+} elseif (isset($_GET['error'])) {
+    if ($_GET['error'] === 'email_exists') {
+        echo "<p>Este email ya está registrado.</p>";
+    } elseif ($_GET['error'] === 'database_error') {
+        echo "<p>Ocurrió un error al registrar tu email. Inténtalo de nuevo más tarde.</p>";
+    }
+}
+
+if ($stmt->execute()) {
+    header('Location: index_copy.php?success=1');
+    exit();
+} else {
+    if ($stmt->errno === 1062) {
+        header('Location: index_copy.php?error=email_exists');
+    } else {
+        header('Location: index_copy.php?error=database_error');
+    }
+    exit();
+}
+?>
+
 </section>
 
 
@@ -61,7 +83,11 @@
 
 
 <section class="container">
-<?
+<?php
+if (!$conn) {
+    die("Error de conexión a la base de datos: " . mysqli_connect_error());
+}
+
 // desplegams los datos de la base de datos
 
 $sql="SELECT 
@@ -97,38 +123,31 @@ $resultado_array = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($resultado_array) > 0) 
 {
-    echo "<a href='ficha.php?id=?'><ul class='galeria'>";
+    echo "<ul class='galeria'>";
     while ($row = mysqli_fetch_assoc($resultado_array)) 
     {
         echo "<li class='container'>
-        <div class='contenedor'>";
+        <div class='contenedor'>
+            <a href='ficha.php?id={$row['evento_id']}'>";
         
         if($row['evento_img'] != null)
         {
             echo "<img src='{$row['evento_img']}' alt='Imagen del evento'class='evento'>";
         }
-       // else
-        //{
-            //echo "<img src='img/evento_default.avif' alt='Imagen del evento'class='evento'>";
-        //}
 
-
-       
-
-$fecha= convertirFechaES($row['evento_fecha']);
+        $fecha= convertirFechaES($row['evento_fecha']);
 
         
         echo "<h2>{$row['evento_nombre']}</h2>
       <p> $fecha</p> <!-- Aquí se usa directamente la fecha del evento -->
       <p>Horario: ".date("H:i", strtotime($row['evento_horario']))."</p>
       <p>Lugar: {$row['direccion_nombre']}</p>
-
+      </a>
             
         </div>
         </li>";
     }
     echo "</ul>";
-    echo "</a>";
 }
 
 ?>

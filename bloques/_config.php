@@ -21,7 +21,7 @@ const MENU = [
     ],
     [
         'texto' => 'Festivales',
-        'url'   => 'Festivales.php',         
+        'url'   => 'festivales.php',         
         'clase' => '',
         'target' => 0
     ],

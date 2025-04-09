@@ -1,0 +1,27 @@
+RewriteEngine On
+
+# Reescribir cookies.php a /cookies
+RewriteRule ^cookies$ cookies.php [L]
+
+# Reescribir seguridad.php a /seguridad
+RewriteRule ^seguridad$ seguridad.php [L]
+
+# Reescribir legal.php a /legal
+RewriteRule ^legal$ legal.php [L]
+
+# Reescribir newsletter.php a /newsletter
+RewriteRule ^newsletter$ newsletter.php [L]
+
+RewriteEngine On
+
+# Reescribir /festivales a Festivales.php
+RewriteRule ^festivales$ festivales.php [L]
+
+# Reescribir /sobre-nosotros a nosotros.php
+RewriteRule ^sobre-nosotros$ nosotros.php [L]
+
+# Reescribir /contacto a contacto.php
+RewriteRule ^contacto$ contacto.php [L]
+
+# Reescribir / a index.php
+RewriteRule ^$ index.php [L]
